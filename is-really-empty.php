@@ -36,7 +36,7 @@ function isEmpty( $sString = '' ){
 	if( is_bool($sString) ){ return FALSE; }
 
 	// nan
-	if( is_nan($sString) ){ return TRUE; }
+	if( is_numeric($sString) && is_nan($sString) ){ return TRUE; }
 
 	// float
 	if( is_float($sString) ){ return FALSE; }
